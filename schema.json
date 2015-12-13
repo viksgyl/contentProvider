@@ -1,0 +1,50 @@
+{
+  "Database": "LocalAds",
+  "Description" : "A database to hold property listings",
+  "Tables" : [
+            { "TableName" : "PropList",
+              "Description" : "Table to hold the advertisements",
+              "Fields": [
+                { "FieldName" : "Title",
+                  "Type" : "Text",
+                  "AllowNull" :"False"  
+                },
+                { "FieldName" : "Description",
+                  "Type" : "Text"
+                },
+                { "FieldName" : "Contact",
+                  "Type" : "Text",
+                  "AllowNull" :"False"  
+                },
+                { "FieldName" : "SourceId",
+                  "Type" : "Text",
+                  "AllowNull" :"False"  
+                },
+                { "FieldName" : "Side",
+                  "Type" : "Text"
+                },
+                { "FieldName" : "Condition",
+                  "Type" : "Text"
+                },
+                { "FieldName" : "Price",
+                  "Type" : "Real"
+                },
+                { "FieldName" : "PostedBy",
+                  "Type" : "Text"
+                },
+                { "FieldName" : "DatePosted",
+                  "Type" : "Integer"
+                },
+                { "FieldName" : "Location",
+                  "Type" : "Text",
+                  "AllowNull" :"False"  
+                }
+              ],
+            "Indexes" : [ {"IndexName": "LocationIndex", "Fields": ["Location"], "Unique": "False"},
+                        {"IndexName": "SourceIdIndex", "Fields": ["SourceId"], "Unique": "True"},
+                        {"IndexName": "SideIndex", "Fields": ["Side"], "Unique": "False"},
+                        {"IndexName": "DatePostedIndex", "Fields": ["DatePosted"], "Unique": "False"}
+           ]}
+    ]
+}
+
